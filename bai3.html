@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function vowel(string) {
+        let arr = ["a", "e", "i", "o", "u"];
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (arr.indexOf(string[i].toLowerCase()) !== -1) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return false;
+        }
+    }
+
+    let string = prompt(" Input string  :");
+    vowel(string);
+    console.log(('Number of vowel is: ' + ' ' + vowel(string)));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    arr = [1, 2, 3, 4, 5, 6, 7]
+    check(5, arr)
+
+    function check(number, arr){
+        for (let i = 0; i < arr.length; i++) {
+            if(number === arr[i]){
+                console.log("vị trí của" + " "+  number + " " + "trong mảng là: " + " " + i);
+            }
+        }
+        return -1;
+    }
+    // Câu 2 ý 2
+    let number1 = +prompt('input number1');
+    let flag = false;
+    for (let i = 0; i < arr.length; i++) {
+        if(number1 === arr[i]){
+            flag = true;
+        }
+    }
+    if(flag){
+        alert(number1 + ' ' + 'nằm trong mảng arr');
+    }else {
+        alert(number1 + ' ' + ' không nằm trong mảng arr');
+    }
+
+
+
+</script>
+</body>
+</html>
