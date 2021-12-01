@@ -6,29 +6,24 @@
 </head>
 <body>
 <script>
-    let str = prompt('String: ');
-    let array = str.split('');
-    let arr = ['a', 'o', 'e', 'u', 'i']
-
-    function demSoKyTuNguyenAm(arr1, arr2) {
-        let sum = 0;
-        for (let i = 0; i < arr1.length; i++) {
-            for (let j = 0; j < arr2.length; j++) {
-                if (arr1[i] === arr2[j]) {
-                    sum += 1;
-                }
-
+    function vowel(string) {
+        let arr = ["a", "e", "i", "o", "u"];
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (arr.indexOf(string[i].toLowerCase()) !== -1) {
+                count++;
             }
         }
-        if (sum !== 0 ){
-            return sum;
+        if (count > 0) {
+            return count;
         } else {
             return false;
         }
     }
 
-    console.log(demSoKyTuNguyenAm(array, arr));
-
+    let string = prompt(" Input string  :");
+    vowel(string);
+    console.log(('Number of vowel is: ' + ' ' + vowel(string)));
 
 
 </script>
